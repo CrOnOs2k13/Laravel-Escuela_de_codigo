@@ -6,12 +6,12 @@ use App\Models\Ponentes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class PonenteController extends Controller
+class PonentesController extends Controller
 {
     public function index()
     {
         return response()->json([
-            'ponentes' => Ponente::all(),
+            'ponentes' => Ponentes::all(),
             'status' => 200
         ]);
     }
@@ -28,14 +28,14 @@ class PonenteController extends Controller
             return response()->json(['message' => 'Datos faltantes', 'status' => 400], 400);
         }
 
-        $ponente = Ponente::create($request->all());
+        $ponente = Ponentes::create($request->all());
 
         return response()->json(['ponente' => $ponente, 'status' => 201], 201);
     }
 
     public function show($id)
     {
-        $ponente = Ponente::find($id);
+        $ponente = Ponentes::find($id);
         if (!$ponente) {
             return response()->json(['message' => 'Ponente no encontrado', 'status' => 404], 404);
         }
@@ -45,7 +45,7 @@ class PonenteController extends Controller
 
     public function update(Request $request, $id)
     {
-        $ponente = Ponente::find($id);
+        $ponente = Ponentes::find($id);
         if (!$ponente) {
             return response()->json(['message' => 'Ponente no encontrado', 'status' => 404], 404);
         }
@@ -67,7 +67,7 @@ class PonenteController extends Controller
 
     public function destroy($id)
     {
-        $ponente = Ponente::find($id);
+        $ponente = Ponentes::find($id);
         if (!$ponente) {
             return response()->json(['message' => 'Ponente no encontrado', 'status' => 404], 404);
         }

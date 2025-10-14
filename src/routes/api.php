@@ -12,9 +12,9 @@ Route::get('/user', function (Request $request) {
 // Agregar el controlador EventoController
 use App\Http\Controllers\EventoController;
 // Agregar el controlador PonenteController
-use App\Http\Controllers\PonenteController;
+use App\Http\Controllers\PonentesController;
 // Agregar el controlador AsistenteController
-use App\Http\Controllers\AsistenteController;
+use App\Http\Controllers\AsistentesController;
 /**
 * Rutas para el recurso Evento.
 */
@@ -30,15 +30,15 @@ Route::put('/eventos/{id}', [EventoController::class, 'update']);
 Route::delete('/eventos/{id}', [EventoController::class, 'destroy']);
 
 // Rutas para Ponentes
-Route::get('/ponentes', [PonenteController::class, 'index']);
-Route::post('/ponentes', [PonenteController::class, 'store']);
-Route::get('/ponentes/{id}', [PonenteController::class, 'show']);
-Route::put('/ponentes/{id}', [PonenteController::class, 'update']);
-Route::delete('/ponentes/{id}', [PonenteController::class, 'destroy']);
+Route::get('/ponentes', [PonentesController::class, 'index']);
+Route::post('/ponentes', [PonentesController::class, 'store']);
+Route::get('/ponentes/{id}', [PonentesController::class, 'show']);
+Route::put('/ponentes/{id}', [PonentesController::class, 'update']);
+Route::delete('/ponentes/{id}', [PonentesController::class, 'destroy']);
 
 // Rutas para Asistentes
-Route::get('/asistentes', [AsistenteController::class, 'index']);
-Route::post('/asistentes', [AsistenteController::class, 'store']);
-Route::get('/asistentes/{id}', [AsistenteController::class, 'show']);
-Route::put('/asistentes/{id}', [AsistenteController::class, 'update']);
-Route::delete('/asistentes/{id}', [AsistenteController::class, 'destroy']);
+Route::get('/asistentes', [AsistentesController::class, 'index']);
+Route::post('/asistentes', [AsistentesController::class, 'store']);
+Route::get('/asistentes/{id}', [AsistentesController::class, 'show']);
+Route::put('/asistentes/{id}', [AsistentesController::class, 'update']);
+Route::delete('/asistentes/{id}', [AsistentesController::class, 'destroy']);

@@ -1,16 +1,16 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Asistente;
+use App\Models\Asistentes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class AsistenteController extends Controller
+class AsistentesController extends Controller
 {
     public function index()
     {
         return response()->json([
-            'asistentes' => Asistente::all(),
+            'asistentes' => Asistentes::all(),
             'status' => 200
         ]);
     }
@@ -28,14 +28,14 @@ class AsistenteController extends Controller
             return response()->json(['message' => 'Datos faltantes o inválidos', 'status' => 400], 400);
         }
 
-        $asistente = Asistente::create($request->all());
+        $asistente = Asistentes::create($request->all());
 
         return response()->json(['asistente' => $asistente, 'status' => 201], 201);
     }
 
     public function show($id)
     {
-        $asistente = Asistente::find($id);
+        $asistente = Asistentes::find($id);
         if (!$asistente) {
             return response()->json(['message' => 'Asistente no encontrado', 'status' => 404], 404);
         }
@@ -45,7 +45,7 @@ class AsistenteController extends Controller
 
     public function update(Request $request, $id)
     {
-        $asistente = Asistente::find($id);
+        $asistente = Asistentes::find($id);
         if (!$asistente) {
             return response()->json(['message' => 'Asistente no encontrado', 'status' => 404], 404);
         }
@@ -68,7 +68,7 @@ class AsistenteController extends Controller
 
     public function destroy($id)
     {
-        $asistente = Asistente::find($id);
+        $asistente = Asistentes::find($id);
         if (!$asistente) {
             return response()->json(['message' => 'Asistente no encontrado', 'status' => 404], 404);
         }

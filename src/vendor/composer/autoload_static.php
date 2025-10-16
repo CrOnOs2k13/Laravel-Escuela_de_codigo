@@ -148,6 +148,10 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
             'Laravel\\Passport\\' => 17,
             'Laravel\\Pail\\' => 13,
         ),
+        'K' => 
+        array (
+            'KeycloakGuard\\' => 14,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -497,6 +501,10 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'Laravel\\Pail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/pail/src',
+        ),
+        'KeycloakGuard\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -3067,6 +3075,14 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'KeycloakGuard\\ActingAsKeycloakUser' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/ActingAsKeycloakUser.php',
+        'KeycloakGuard\\Exceptions\\KeycloakGuardException' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/Exceptions/KeycloakGuardException.php',
+        'KeycloakGuard\\Exceptions\\ResourceAccessNotAllowedException' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/Exceptions/ResourceAccessNotAllowedException.php',
+        'KeycloakGuard\\Exceptions\\TokenException' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/Exceptions/TokenException.php',
+        'KeycloakGuard\\Exceptions\\UserNotFoundException' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/Exceptions/UserNotFoundException.php',
+        'KeycloakGuard\\KeycloakGuard' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/KeycloakGuard.php',
+        'KeycloakGuard\\KeycloakGuardServiceProvider' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/KeycloakGuardServiceProvider.php',
+        'KeycloakGuard\\Token' => __DIR__ . '/..' . '/robsontenorio/laravel-keycloak-guard/src/Token.php',
         'Laravel\\Pail\\Console\\Commands\\PailCommand' => __DIR__ . '/..' . '/laravel/pail/src/Console/Commands/PailCommand.php',
         'Laravel\\Pail\\Contracts\\Printer' => __DIR__ . '/..' . '/laravel/pail/src/Contracts/Printer.php',
         'Laravel\\Pail\\File' => __DIR__ . '/..' . '/laravel/pail/src/File.php',

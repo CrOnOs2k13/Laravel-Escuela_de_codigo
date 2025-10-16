@@ -12,12 +12,17 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
+/* archivo original
     'defaults' => [
         'guard' => env('AUTH_GUARD', 'web'),
         'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
     ],
-
+*/
+/*codigo de practica */
+    'defaults' => [
+        'guard' => 'api',
+        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
+    ],
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -34,14 +39,25 @@ return [
     | Supported: "session"
     |
     */
-
+/* archivo original
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
     ],
-
+*/
+/* codigo de practica*/
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        'api' => [
+            'driver' => 'keycloak', // usa el guard de Keycloak
+            'provider' => 'users',
+        ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | User Providers

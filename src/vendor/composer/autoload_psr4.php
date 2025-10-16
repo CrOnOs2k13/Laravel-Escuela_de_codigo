@@ -79,6 +79,7 @@ return array(
     'Laravel\\Passport\\Database\\Factories\\' => array($vendorDir . '/laravel/passport/database/factories'),
     'Laravel\\Passport\\' => array($vendorDir . '/laravel/passport/src'),
     'Laravel\\Pail\\' => array($vendorDir . '/laravel/pail/src'),
+    'KeycloakGuard\\' => array($vendorDir . '/robsontenorio/laravel-keycloak-guard/src'),
     'Illuminate\\Support\\' => array($vendorDir . '/laravel/framework/src/Illuminate/Macroable', $vendorDir . '/laravel/framework/src/Illuminate/Collections', $vendorDir . '/laravel/framework/src/Illuminate/Conditionable'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'Http\\Discovery\\' => array($vendorDir . '/php-http/discovery/src'),

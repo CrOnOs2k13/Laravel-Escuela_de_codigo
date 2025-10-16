@@ -5607,6 +5607,69 @@
             "install-path": "../ramsey/uuid"
         },
         {
+            "name": "robsontenorio/laravel-keycloak-guard",
+            "version": "1.6.3",
+            "version_normalized": "1.6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robsontenorio/laravel-keycloak-guard.git",
+                "reference": "6a2f40813a80d7343b24979e0797562d8c2618d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robsontenorio/laravel-keycloak-guard/zipball/6a2f40813a80d7343b24979e0797562d8c2618d7",
+                "reference": "6a2f40813a80d7343b24979e0797562d8c2618d7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "firebase/php-jwt": "^6.3",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.10",
+                "nunomaduro/collision": "^6.3",
+                "orchestra/testbench": "^7.7",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5"
+            },
+            "time": "2024-12-28T19:18:43+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KeycloakGuard\\KeycloakGuardServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "KeycloakGuard\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robson Tenório"
+                }
+            ],
+            "description": "🔑 Simple Keycloak Guard for Laravel",
+            "homepage": "https://github.com/robsontenorio/laravel-keycloak-guard",
+            "keywords": [
+                "keycloak",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/robsontenorio/laravel-keycloak-guard/issues",
+                "source": "https://github.com/robsontenorio/laravel-keycloak-guard/tree/1.6.3"
+            },
+            "install-path": "../robsontenorio/laravel-keycloak-guard"
+        },
+        {
             "name": "sebastian/cli-parser",
             "version": "3.0.2",
             "version_normalized": "3.0.2.0",

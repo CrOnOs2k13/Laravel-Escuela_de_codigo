@@ -992,6 +992,15 @@
                 0 => '4.9.1',
             ),
         ),
+        'robsontenorio/laravel-keycloak-guard' => array(
+            'pretty_version' => '1.6.3',
+            'version' => '1.6.3.0',
+            'reference' => '6a2f40813a80d7343b24979e0797562d8c2618d7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../robsontenorio/laravel-keycloak-guard',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '3.0.2',
             'version' => '3.0.2.0',

@@ -20,17 +20,51 @@ services:
       - LARAVEL_DATABASE_USER=bn_myapp
       - LARAVEL_DATABASE_PASSWORD=b1tnam1_my@pp 
     ports:
-      - '8000:8000' 
-
+     - '8000:8000' 
     volumes:
       - './src:/app' 
     depends_on:
        - mariadb 
     networks:
       - laravel-network 
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+      KC_DB: postgres
+      KC_DB_URL_HOST: postgres
+      KC_DB_URL_DATABASE: keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: password
+      KC_HTTP_PORT: 8080
+    ports:
+     - "0.0.0.0:8080:8080"
+    depends_on:
+     - postgres
+    networks:
+     - laravel-network
+    command: start-dev
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    networks:
+     - laravel-network
+    volumes:
+     - postgres_data:/var/lib/postgresql/data
+
+
 volumes: 
   mariadb_data: 
     driver: local 
+  postgres_data:
+    driver: local
+  
 networks: 
   laravel-network: 
     driver: bridge
